@@ -8,7 +8,7 @@ alias remove="sudo apt remove"
 alias autorm="sudo apt autoremove"
 alias h="history | grep"
 alias p="ps aux | grep"
-alias sauce="source ~/.bashrc"
+alias sauce="source ~/.config/fish/config.fish"
 alias rm="rm -I"
 alias lq="lq -u"
 
