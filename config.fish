@@ -1,7 +1,5 @@
 set fish_greeting
 
-source /home/yo/code/ezkl/ezkl.fish.sh
-
 alias get="sudo apt install -y"
 alias update="sudo apt update"
 alias upgrade="sudo apt -y dist-upgrade"
@@ -13,3 +11,5 @@ alias p="ps aux | grep"
 alias sauce="source ~/.bashrc"
 alias rm="rm -I"
 alias lq="lq -u"
+
+source /home/yo/code/ezkl/ezkl.fish.sh
