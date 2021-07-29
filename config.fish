@@ -12,4 +12,10 @@ alias sauce="source ~/.config/fish/config.fish"
 alias rm="rm -I"
 alias lq="lq -u"
 
+function search
+  echo "----------------------------"
+  ag --ignore "*bundle*" --width 200 "$argv"
+  echo "----------------------------"
+end
+
 source /home/yo/code/ezkl/ezkl.fish.sh
