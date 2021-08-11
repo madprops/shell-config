@@ -10,7 +10,7 @@ alias h="history | grep"
 alias p="ps aux | grep"
 alias sauce="source ~/.config/fish/config.fish"
 alias rm="rm -I"
-alias lq="lq -u"
+alias lq="/bin/lq -u"
 
 function search
   echo "----------------------------"
