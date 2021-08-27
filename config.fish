@@ -11,6 +11,7 @@ alias p="ps aux | grep"
 alias sauce="source ~/.config/fish/config.fish"
 alias rm="rm -I"
 alias lq="/bin/lq -u"
+alias clone="git clone --depth 1"
 
 function search
   echo "----------------------------"
