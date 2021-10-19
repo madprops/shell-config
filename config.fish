@@ -21,4 +21,4 @@ end
 
 source /home/yo/code/ezkl/ezkl.fish.sh
 
-set PATH $PATH:/home/yo/scripts:/home/yo/.local/bin:/home/yo/bin:/home/yo/.nimble/bin
+set PATH $PATH:/home/yo/scripts:/home/yo/.local/bin:/home/yo/bin:/home/yo/.nimble/bin:/home/yo/go/bin
