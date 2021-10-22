@@ -1,11 +1,8 @@
 set fish_greeting
 
-alias get="sudo apt install -y"
-alias update="sudo apt update"
-alias upgrade="sudo apt -y dist-upgrade"
-alias up="update && upgrade"
-alias remove="sudo apt remove"
-alias autorm="sudo apt autoremove"
+alias get="sudo pacman -S"
+alias update="sudo pacman -Syy"
+alias upgrade="sudo pacman -Syu"
 alias h="history | grep"
 alias p="ps aux | grep"
 alias sauce="source ~/.config/fish/config.fish"
