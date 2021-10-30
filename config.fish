@@ -8,7 +8,9 @@ alias p="ps aux | grep"
 alias sauce="source ~/.config/fish/config.fish"
 alias rm="rm -I"
 alias lq="/bin/lq -u"
-alias clone="git clone --depth 1"
+alias gitclone="git clone --depth 1"
+alias flatget="flatpak --installation=extra install"
+alias flatrun="flatpak --installation=extra run"
 
 function search
   echo "----------------------------"
@@ -17,5 +19,3 @@ function search
 end
 
 source /home/yo/code/ezkl/ezkl.fish.sh
-
-set PATH $PATH:/home/yo/scripts:/home/yo/.local/bin:/home/yo/bin:/home/yo/.nimble/bin:/home/yo/go/bin
