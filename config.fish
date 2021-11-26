@@ -13,6 +13,7 @@ alias flatget="flatpak --installation=extra install"
 alias flatremove="flatpak --installation=extra uninstall"
 alias flatclean="flatpak --installation=extra uninstall --unused"
 alias flatrun="flatpak --installation=extra run"
+alias aurinstalled="pacman -Qqm"
 
 function search
   echo "----------------------------"
