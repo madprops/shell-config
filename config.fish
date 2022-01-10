@@ -14,6 +14,7 @@ alias flatremove="flatpak --installation=extra uninstall"
 alias flatclean="flatpak --installation=extra uninstall --unused"
 alias flatrun="flatpak --installation=extra run"
 alias aurinstalled="pacman -Qqm"
+alias d="dolphin ."
 
 function search
   echo "----------------------------"
