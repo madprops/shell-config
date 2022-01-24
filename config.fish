@@ -15,6 +15,7 @@ alias flatclean="flatpak --installation=extra uninstall --unused"
 alias flatrun="flatpak --installation=extra run"
 alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
+alias getaudio="yt-dlp --extract-audio --audio-format flac --audio-quality 3"
 
 function search
   echo "----------------------------"
