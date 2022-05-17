@@ -2,7 +2,7 @@ set fish_greeting
 
 alias get="sudo pacman -S"
 alias update="sudo pacman -Syy"
-alias upgrade="sudo pacman -Syu"
+alias upgrade="yay && flatpak update"
 alias h="history | grep"
 alias p="ps aux | grep"
 alias sauce="source ~/.config/fish/config.fish"
