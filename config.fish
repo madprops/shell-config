@@ -24,6 +24,10 @@ function search
   echo "----------------------------"
 end
 
+function f
+  find . -type f -iname "*$argv*"
+end
+
 source /home/yo/code/ezkl/ezkl.fish.sh
 
 set NPM_PACKAGES "$HOME/.npm-packages"
