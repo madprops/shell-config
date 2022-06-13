@@ -28,7 +28,8 @@ function f
   find . -type f -iname "*$argv*"
 end
 
-source /home/yo/code/ezkl/ezkl.fish.sh
+set -g EZKL_PATH "/home/yo/code/ezkl"
+source /home/yo/code/ezkl/ezkl.fish
 
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
