@@ -18,7 +18,7 @@ alias d="dolphin ."
 alias getaudio="yt-dlp --extract-audio --audio-format mp3"
 alias dirsize="du -sh"
 
-function search
+function s
   echo "----------------------------"
   ag --ignore "*bundle*" --width 200 "$argv"
   echo "----------------------------"
