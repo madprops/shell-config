@@ -17,6 +17,7 @@ alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
 alias getaudio="yt-dlp --extract-audio --audio-format mp3"
 alias dirsize="du -sh"
+alias i="python /home/yo/code/imageview/imageview.py gwenview"
 
 function s
   echo "----------------------------"
