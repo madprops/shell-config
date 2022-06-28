@@ -42,12 +42,12 @@ function v
   python /home/yo/code/symview/symview.py videos "$argv"
 end
 
-function m
-  python /home/yo/code/symview/symview.py media "$argv"
+function a
+  python /home/yo/code/symview/symview.py audio "$argv"
 end
 
-function a
-  python /home/yo/code/symview/symview.py all "$argv"
+function m
+  python /home/yo/code/symview/symview.py media "$argv"
 end
 
 set -g EZKL_PATH "/home/yo/code/ezkl"
