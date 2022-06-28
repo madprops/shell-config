@@ -3,8 +3,6 @@ set fish_greeting
 alias get="sudo pacman -S"
 alias update="sudo pacman -Syy"
 alias upgrade="yay && flatpak update"
-alias h="history | grep"
-alias p="ps aux | grep"
 alias sauce="source ~/.config/fish/config.fish"
 alias rm="rm -I"
 alias lq="/bin/lq -u"
@@ -18,6 +16,14 @@ alias d="dolphin ."
 alias getaudio="yt-dlp --extract-audio --audio-format mp3"
 alias dirsize="du -sh"
 alias i="python /home/yo/code/imageview/imageview.py gwenview"
+
+function h
+  history | grep "$argv"
+end
+
+function p
+  ps aux | grep "$argv"
+end
 
 function s
   echo "----------------------------"
