@@ -15,7 +15,6 @@ alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
 alias getaudio="yt-dlp --extract-audio --audio-format mp3"
 alias dirsize="du -sh"
-alias i="python /home/yo/code/imageview/imageview.py gwenview"
 
 function h
   history | grep "$argv"
@@ -33,6 +32,10 @@ end
 
 function f
   find . -type f -iname "*$argv*"
+end
+
+function i
+  python /home/yo/code/imageview/imageview.py gwenview "$argv"
 end
 
 set -g EZKL_PATH "/home/yo/code/ezkl"
