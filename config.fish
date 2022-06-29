@@ -50,6 +50,13 @@ function m
   python /home/yo/code/symview/symview.py media "$argv"
 end
 
+function remove_path
+  if set -l index (contains -i "$argv" $fish_user_paths)
+    set -e fish_user_paths[$index]
+    echo "Removed $argv from the path"
+  end
+end
+
 set -g EZKL_PATH "/home/yo/code/ezkl"
 source /home/yo/code/ezkl/ezkl.fish
 
