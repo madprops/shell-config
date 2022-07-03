@@ -56,8 +56,9 @@ function remove_path
   end
 end
 
-set -g EZKL_PATH "/home/yo/code/ezkl"
-source /home/yo/code/ezkl/ezkl.fish
+function z
+  cd $(ezkl jump "$argv")
+end
 
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
