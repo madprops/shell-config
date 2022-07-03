@@ -24,9 +24,7 @@ function p
 end
 
 function s
-  echo "----------------------------"
-  ag --ignore "*bundle*" --width 200 "$argv"
-  echo "----------------------------"
+  goldie "$argv"
 end
 
 function f
