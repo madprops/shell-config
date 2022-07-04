@@ -58,6 +58,14 @@ function z
   cd $(ezkl jump "$argv")
 end
 
+function zz
+  ezkl remember
+end
+
+function zzz
+  ezkl forget
+end
+
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
 set MANPATH $NPM_PACKAGES/share/man $MANPATH 
