@@ -32,19 +32,19 @@ function f
 end
 
 function i
-  python /home/yo/code/symview/symview.py images "$argv"
+  symview images "$argv"
 end
 
 function v
-  python /home/yo/code/symview/symview.py videos "$argv"
+  symview videos "$argv"
 end
 
 function a
-  python /home/yo/code/symview/symview.py audio "$argv"
+  symview audio "$argv"
 end
 
 function m
-  python /home/yo/code/symview/symview.py media "$argv"
+  symview media "$argv"
 end
 
 function remove_path
