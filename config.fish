@@ -66,6 +66,14 @@ function zzz
   ezkl forget
 end
 
+function o
+  set p (python ~/code/openfile/openfile.py)
+
+  if test -n "$p"
+    code "$p"
+  end
+end
+
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
 set MANPATH $NPM_PACKAGES/share/man $MANPATH 
