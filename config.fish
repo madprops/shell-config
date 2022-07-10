@@ -55,7 +55,13 @@ function remove_path
 end
 
 function z
-  cd $(ezkl jump "$argv")
+  set p $(ezkl jump "$argv")
+
+  cd "$p"
+
+  if test $status != 0
+     ezkl forget "$p"
+  end
 end
 
 function zz
