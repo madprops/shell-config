@@ -14,6 +14,7 @@ alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
 alias getaudio="yt-dlp --extract-audio --audio-format mp3"
 alias dirsize="du -sh"
+alias checkcode="goldie \"console.log\" && goldie '\"'"
 
 function h
   history | grep "$argv"
