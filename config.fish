@@ -91,5 +91,5 @@ function intercept --on-event fish_postexec
     return
   end
 
-  ~/bin/save_command $argv
+  ruby ~/.config/awesome/scripts/save_command.rb $argv
 end
