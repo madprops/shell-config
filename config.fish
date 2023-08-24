@@ -85,55 +85,11 @@ end
 
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
-set xhistory ~/.local/share/fish/xhistory.log
-set xhistory_tmp ~/.local/share/fish/xhistory.tmp
-set max_xhistory 500
 
 function intercept --on-event fish_postexec
   if [ "$status" != 0 ]
     return
   end
 
-  set cmd (string trim $argv)
-
-  if string match -q "cd" $cmd
-    return
-  end
-
-  if string match -q "cd *" $cmd
-    return
-  end
-
-  if string match -q "ls" $cmd
-    return
-  end
-
-  if string match -q "lq" $cmd
-    return
-  end
-
-  if string match -q "z" $cmd
-    return
-  end
-
-  if string match -q "z *" $cmd
-    return
-  end
-
-  if string match -q "br" $cmd
-    return
-  end
-
-  if string match -q "o" $cmd
-    return
-  end
-
-  echo "$cmd" >> $xhistory
-  awk '!seen[$0]++' $xhistory >$xhistory_tmp && mv $xhistory_tmp $xhistory
-  set log_size (count (cat $xhistory))
-
-  while test $log_size -gt $max_xhistory
-    sed -i 1d $xhistory
-    set log_size (count (cat $xhistory))
-  end
+  ~/bin/save_command $argv
 end
