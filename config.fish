@@ -92,14 +92,6 @@ function intercept --on-event fish_postexec
   end
 
   if status is-interactive
-    if string match -q "cd" $argv
-      lq
-    end
-
-    if string match -q "cd *" $argv
-      lq
-    end
-
     ruby ~/.config/awesome/scripts/save_command.rb $argv
   end
 end
