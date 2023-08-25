@@ -87,7 +87,7 @@ set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
 
 function intercept --on-event fish_postexec
-  if [ "$status" != 0 ]
+  if [ $status != 0 ]
     return
   end
 
