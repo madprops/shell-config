@@ -85,13 +85,3 @@ end
 
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
-
-function intercept --on-event fish_postexec
-  if [ $status != 0 ]
-    return
-  end
-
-  if status is-interactive
-    ruby ~/.config/awesome/scripts/save_command.rb $argv
-  end
-end
