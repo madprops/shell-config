@@ -48,6 +48,10 @@ function m
   symview media "$argv"
 end
 
+function album
+  cd  /home/yo/music/library/albums && rip search "$argv"
+end
+
 function remove_path
   if set -l index (contains -i "$argv" $fish_user_paths)
     set -e fish_user_paths[$index]
