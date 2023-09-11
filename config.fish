@@ -14,7 +14,11 @@ alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
 alias getaudio="yt-dlp --extract-audio --audio-format mp3"
 alias dirsize="du -sh"
-alias checkcode="goldie \"console.log\" && goldie '\"'"
+
+function fish_prompt
+    set -l timestamp (date "+%H:%M:%S")
+    echo -n (set_color cyan)"[$timestamp]"(set_color normal) "$PWD" "> "
+end
 
 function h
   history | grep "$argv"
@@ -50,6 +54,10 @@ end
 
 function album
   cd  /home/yo/music/library/albums && rip search "$argv"
+end
+
+function checkcode
+  goldie "console.log" && goldie '"'
 end
 
 function checkdouble
