@@ -58,9 +58,6 @@ end
 
 function checkcode
   goldie "console.log" && goldie '"'
-end
-
-function checkdouble
   find . -type f -exec awk 'BEGIN { prev = "" } NR > 1 && prev == "" && $0 == "" { print FILENAME ":" NR - 1 } { prev = $0 }' {} \;
 end
 
