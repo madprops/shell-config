@@ -16,8 +16,12 @@ alias getaudio="yt-dlp --extract-audio --audio-format mp3"
 alias dirsize="du -sh"
 
 function fish_prompt
-    set -l timestamp (date "+%H:%M:%S")
-    echo -n (set_color cyan)"[$timestamp]"(set_color normal) "$PWD" "> "
+  set -l timestamp (date "+%H:%M:%S")
+  echo -n (set_color cyan)"[$timestamp]"(set_color normal) "$PWD" "> "
+end
+
+function checknetwork
+  strace -f -e trace=network -s 10000 $argv
 end
 
 function h
