@@ -24,6 +24,10 @@ function checknetwork
   strace -f -e trace=network -s 10000 $argv
 end
 
+function numlines
+  find . -type f -exec cat {} \; | wc -l
+end
+
 function h
   history | grep "$argv"
 end
