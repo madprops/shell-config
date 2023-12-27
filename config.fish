@@ -103,5 +103,9 @@ function o
   end
 end
 
+function aurget
+  yay -a --answerclean None --answerdiff None "$argv"
+end
+
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
