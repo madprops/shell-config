@@ -111,5 +111,21 @@ function aurget
   yay -a --answerclean None --answerdiff None "$argv"
 end
 
+function venv_make
+  python -m venv venv
+end
+
+function venv_install
+  venv/bin/pip install "$argv"
+end
+
+function venv_freeze
+  venv/bin/pip freeze > requirements.txt
+end
+
+function venv_reqs
+  venv/bin/pip install -r requirements.txt
+end
+
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
