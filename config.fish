@@ -127,5 +127,9 @@ function venv_reqs
   venv/bin/pip install -r requirements.txt
 end
 
+function heaviest
+  expac -s "%m %n" | sort -n
+end
+
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
