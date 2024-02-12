@@ -100,11 +100,15 @@ function zzz
 end
 
 function o
+  # Run openfile.py and get a path
   set p (python ~/code/openfile/openfile.py)
 
+  # Check if path exists
   if test -n "$p"
     # Resolve symlinks
     set resolved (readlink -f "$p")
+
+    # Open with code editor
     code "$resolved"
   end
 end
