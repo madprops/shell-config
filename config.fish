@@ -103,7 +103,9 @@ function o
   set p (python ~/code/openfile/openfile.py)
 
   if test -n "$p"
-    code "$p"
+    # Resolve symlinks
+    set resolved (readlink -f "$p")
+    code "$resolved"
   end
 end
 
