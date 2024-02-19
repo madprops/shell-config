@@ -154,7 +154,7 @@ end
 function gif_number
   borat/venv/bin/python borat/src/main.py \
   --input "/home/yo/Downloads/pics/pics1/Dek1759390274543456256.png" \
-  --top 0 --words "[number 1-2] [x3]" --fontcolor 0,0,0 --font triplex
+  --top 0 --words "[number 1-3] [x3]" --fontcolor 0,0,0 --font triplex
 end
 
 set NPM_PACKAGES "$HOME/.npm-packages"
