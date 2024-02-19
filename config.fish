@@ -137,5 +137,19 @@ function heaviest
   expac -s "%m %n" | sort -n
 end
 
+function gif_wins
+  borat/venv/bin/python borat/src/main.py \
+  --input "/home/yo/Downloads/pics/gifs1/1667107980975667.gif" \
+  --words "$argv wins a ; [repeat] ; [RANDOM] ; [repeat]" --bgcolor 0,0,0 \
+  --bottom 0 --fontsize 1.5 --width 600 --filter anyhue2 --framelist 11,11,33,33
+end
+
+function gif_isa
+  borat/venv/bin/python borat/src/main.py \
+  --input "/home/yo/Downloads/pics/pics1/1708233011778349.jpg" \
+  --words "$argv is [Random] [x5]" --bgcolor random_dark2 --fontcolor random_light2 \
+  --top 0 --fontsize 2.3 --filter random2 --width 600
+end
+
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
