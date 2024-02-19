@@ -151,5 +151,11 @@ function gif_isa
   --top 0 --fontsize 2.3 --filter random2 --width 600
 end
 
+function gif_number
+  borat/venv/bin/python borat/src/main.py \
+  --input "/home/yo/Downloads/pics/pics1/Dek1759390274543456256.png" \
+  --top 0 --words "[number] [x3]" --fontcolor 0,0,0 --font triplex
+end
+
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
