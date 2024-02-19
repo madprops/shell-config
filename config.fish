@@ -14,14 +14,14 @@ alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
 alias dirsize="du -sh"
 
-function getaudio
-  cd ~/music/library/units/ &&
-  yt-dlp --extract-audio --audio-format mp3 "$argv"
-end
-
 function fish_prompt
   set -l timestamp (date "+%H:%M:%S")
   echo -n (set_color cyan)"[$timestamp]"(set_color normal) "$PWD" "> "
+end
+
+function getaudio
+  cd ~/music/library/units/ &&
+  yt-dlp --extract-audio --audio-format mp3 "$argv"
 end
 
 function checknetwork
