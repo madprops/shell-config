@@ -13,6 +13,7 @@ alias flatrun="flatpak --installation=extra run"
 alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
 alias dirsize="du -sh"
+alias gifmaker="/home/yo/code/borat/venv/bin/python /home/yo/code/borat/src/main.py"
 
 function fish_prompt
   set -l timestamp (date "+%H:%M:%S")
