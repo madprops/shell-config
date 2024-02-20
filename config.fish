@@ -139,21 +139,21 @@ end
 
 function gif_wins
   borat/venv/bin/python borat/src/main.py \
-  --input "/home/yo/Downloads/pics/gifs1/1667107980975667.gif" \
+  --input "/home/yo/Downloads/pics/gifs3/1667107980975667.gif" \
   --words "$argv wins a ; [repeat] ; [RANDOM] ; [repeat]" --bgcolor 0,0,0 \
   --bottom 0 --fontsize 1.5 --width 600 --filter anyhue2 --framelist 11,11,33,33
 end
 
 function gif_isa
   borat/venv/bin/python borat/src/main.py \
-  --input "/home/yo/Downloads/pics/pics1/1708233011778349.jpg" \
-  --words "$argv is [Random] [x5]" --bgcolor random_dark2 --fontcolor random_light2 \
+  --input "/home/yo/Downloads/pics/pics27/1708233011778349.jpg" \
+  --words "$argv is [Random] [x5]" --bgcolor dark2 --fontcolor light2 \
   --top 0 --fontsize 2.3 --filter random2 --width 600
 end
 
 function gif_number
   borat/venv/bin/python borat/src/main.py \
-  --input "/home/yo/Downloads/pics/pics1/Dek1759390274543456256.png" \
+  --input "/home/yo/Downloads/pics/pics27/Dek1759390274543456256.png" \
   --top 0 --words "[number 1-3] [x3]" --fontcolor 0,0,0 --font triplex
 end
 
