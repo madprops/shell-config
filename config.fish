@@ -122,8 +122,9 @@ function venv_make
 end
 
 function venv_install
-  venv/bin/pip install "$argv"
-  venv/bin/pip list | grep "$argv"
+  venv/bin/pip install "$argv" &&
+  set name (echo "$argv" | tr "-" "_") &&
+  venv/bin/pip list | grep "$name"
 end
 
 function venv_freeze
