@@ -123,6 +123,7 @@ end
 
 function venv_install
   venv/bin/pip install "$argv"
+  venv/bin/pip list | grep "$argv"
 end
 
 function venv_freeze
