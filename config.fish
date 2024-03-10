@@ -16,7 +16,7 @@ alias dirsize="du -sh"
 
 function fish_prompt
   set -l timestamp (date "+%H:%M:%S")
-  echo -n (set_color cyan)"[$timestamp]"(set_color normal) "$PWD" "> "
+  echo -n (set_color cyan)"[$timestamp]"(set_color normal) (prompt_pwd) "> "
 end
 
 function getaudio
