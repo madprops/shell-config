@@ -124,7 +124,7 @@ end
 function venv_install
   venv/bin/pip install "$argv" &&
   set name (echo "$argv" | tr "-" "_") &&
-  venv/bin/pip list | grep "$name"
+  venv/bin/pip list | grep -i "$name"
 end
 
 function venv_freeze
