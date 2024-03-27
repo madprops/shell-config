@@ -108,8 +108,12 @@ function o
     # Resolve symlinks
     set resolved (readlink -f "$p")
 
-    # Open with code editor
-    code "$resolved"
+    # Check if directory or file
+    if test -d "$resolved"
+      cd "$resolved"
+    else
+      code "$resolved"
+    end
   end
 end
 
