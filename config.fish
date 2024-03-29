@@ -3,7 +3,7 @@ set fish_greeting
 alias get="sudo pacman -S"
 alias update="sudo pacman -Syy"
 alias upgrade="sudo pacman -Syu"
-alias upgrade_aur="yay -Sua --aur"
+alias upgrade_aur="yay -Syu --aur"
 alias upgrade_flatpak="flatpak update"
 alias sauce="source ~/.config/fish/config.fish"
 alias rm="rm -I"
