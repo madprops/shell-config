@@ -15,6 +15,7 @@ alias flatrun="flatpak --installation=extra run"
 alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
 alias dirsize="du -sh"
+alias pacclean="sudo pacman -Rns $(pacman -Qdtq)"
 
 function fish_prompt
   set -l timestamp (date "+%H:%M:%S")
