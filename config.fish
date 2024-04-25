@@ -149,6 +149,10 @@ function heaviest
   expac -s "%m %n" | sort -n
 end
 
+function installed
+  pacman -Qqe
+end
+
 source ~/.config/shell/vars.fish
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
