@@ -71,7 +71,7 @@ function m
 end
 
 function album
-  cd /home/yo/music/library/albums && rip search "$argv"
+  cd /home/yo/music/library/albums && rip search qobuz album "$argv"
 end
 
 function remove_metadata
