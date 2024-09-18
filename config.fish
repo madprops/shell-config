@@ -16,7 +16,6 @@ alias flatrun="flatpak --installation=extra run"
 alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
 alias dirsize="du -sh"
-alias tagdiff="git diff $(git describe --tags --abbrev=0) HEAD"
 
 function pacclean
   sudo pacman -Rns $(pacman -Qdtq)
@@ -85,6 +84,10 @@ function remove_path
     set -e fish_user_paths[$index]
     echo "Removed $argv from the path"
   end
+end
+
+function tagdiff
+  git diff $(git describe --tags --abbrev=0) HEAD
 end
 
 function z
