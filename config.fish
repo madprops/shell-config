@@ -128,6 +128,10 @@ function o
   end
 end
 
+function c
+  python ~/code/runcmd/runcmd.py
+end
+
 function aurget
   yay -a --answerclean None --answerdiff None "$argv"
 end
