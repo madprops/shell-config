@@ -28,7 +28,7 @@ end
 
 function getaudio
   cd ~/music/units &&
-  yt-dlp --extract-audio --audio-format mp3 "$argv"
+  yt-dlp --extract-audio --audio-format mp3 -f bestaudio "$argv"
 end
 
 function checknetwork
