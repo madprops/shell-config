@@ -43,6 +43,10 @@ function h
   history | grep "$argv"
 end
 
+function g
+  goldie "$argv"
+end
+
 function p
   ps aux | grep "$argv"
 end
