@@ -16,6 +16,7 @@ alias flatrun="flatpak --installation=extra run"
 alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
 alias dirsize="du -sh"
+alias q="touch /tmp/q && tail -f -n0 /tmp/q"
 
 function pacclean
   sudo pacman -Rns $(pacman -Qdtq)
