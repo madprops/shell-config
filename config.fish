@@ -17,6 +17,7 @@ alias aurinstalled="pacman -Qqm"
 alias d="dolphin ."
 alias dirsize="du -sh"
 alias q="touch /tmp/q && tail -f -n0 /tmp/q"
+alias ipaddress="curl -s https://ipv4.myip.wtf"
 
 function pacclean
   sudo pacman -Rns $(pacman -Qdtq)
