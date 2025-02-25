@@ -46,7 +46,7 @@ function h
 end
 
 function g
-  goldie "$argv"
+  goldie -e="/ace/" -e="msg.js" "$argv"
 end
 
 function p
