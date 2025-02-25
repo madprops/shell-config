@@ -118,7 +118,7 @@ end
 
 function o
   # Run openfile.py and get a path
-  set p (python ~/code/openfile/openfile.py)
+  set p (python ~/code/openfile/openfile.py 4)
 
   # Check if path exists
   if test -n "$p"
