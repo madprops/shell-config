@@ -18,6 +18,7 @@ alias d="dolphin ."
 alias dirsize="du -sh"
 alias q="touch /tmp/q && tail -f -n0 /tmp/q"
 alias ipaddress="curl -s https://w.merkoba.com/ip/"
+alias getpage="wget --mirror --page-requisites --no-parent"
 
 function pacclean
   sudo pacman -Rns $(pacman -Qdtq)
