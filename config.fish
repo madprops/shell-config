@@ -19,13 +19,14 @@ alias dirsize="du -sh"
 alias q="touch /tmp/q && tail -f -n0 /tmp/q"
 alias ipaddress="curl -s https://w.merkoba.com/ip/"
 alias getpage="wget --mirror --page-requisites --no-parent"
+alias shake="python ~/code/shakepeer/main.py"
 
 function pacclean
   sudo pacman -Rns $(pacman -Qdtq)
 end
 
 function fish_prompt
-  set -l timestamp (date "+%H:%M:%S")
+  # set -l timestamp (date "+%H:%M:%S")
   echo -n (set_color cyan)"[$timestamp]"(set_color normal) (prompt_pwd) "> "
 end
 
