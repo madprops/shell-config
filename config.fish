@@ -79,10 +79,6 @@ function m
   symview media "$argv"
 end
 
-function album
-  rip search qobuz album "$argv"
-end
-
 function remove_metadata
   convert "$argv" -strip "$argv"
 end
