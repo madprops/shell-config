@@ -31,7 +31,7 @@ function fish_prompt
 end
 
 function getaudio
-  cd ~/music/units &&
+  cd ~/mt/units &&
   yt-dlp --extract-audio --audio-format mp3 -f bestaudio "$argv"
 end
 
