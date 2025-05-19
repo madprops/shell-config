@@ -166,6 +166,68 @@ function installed
   pacman -Qqe
 end
 
+function manera
+  set cmd $argv[1]
+  set term $argv[2]
+
+  # Get the raw man page results with grep
+  set raw_output (man "$cmd" | col -b | grep -i --color=always -C 2 "$term")
+
+  # Process the grep output to preserve original formatting
+  set first_block true
+  set current_block ""
+  set in_separator false
+
+  for line in $raw_output
+    # Check if this is grep's separator (which is just "--")
+    if test "$line" = "--"
+      set in_separator true
+      continue
+    end
+
+    # If we just saw a separator and have content, print the current block and start a new one
+    if test "$in_separator" = true -a -n "$current_block"
+      if test "$first_block" = true
+        set first_block false
+      else
+        # Just add an extra newline between blocks without any dashes
+        printf "\n"
+      end
+
+      # Print non-empty lines from current block
+      for item in $current_block
+        if test -n "$item"
+          printf "%s\n" $item
+        end
+      end
+
+      # Reset for new block
+      set current_block ""
+      set in_separator false
+    end
+
+    # Append non-empty line to current block
+    if test -n "$line"
+      set -a current_block $line
+      set in_separator false
+    end
+  end
+
+  # Print the last block if it exists
+  if test -n "$current_block"
+    if test "$first_block" = false
+      # Just add an extra newline before the final block
+      printf "\n"
+    end
+
+    for item in $current_block
+      if test -n "$item"
+        printf "%s\n" $item
+      end
+    end
+  end
+end
+
 source ~/.config/shell/vars.fish
 set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $PATH $NPM_PACKAGES/bin
