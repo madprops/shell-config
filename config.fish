@@ -20,6 +20,8 @@ alias q="touch /tmp/q && tail -f -n0 /tmp/q"
 alias ipaddress="curl -s https://w.merkoba.com/ip/"
 alias getpage="wget --mirror --page-requisites --no-parent"
 alias shake="python ~/code/shakepeer/main.py"
+alias th="date +%H"
+alias tm="date +%M"
 
 function pacclean
   sudo pacman -Rns $(pacman -Qdtq)
