@@ -22,6 +22,7 @@ alias getpage="wget --mirror --page-requisites --no-parent"
 alias shake="python ~/code/shakepeer/main.py"
 alias th="date +%H"
 alias tm="date +%M"
+alias jerry="wget -q menta.alwaysdata.net/s3/sein.php -O -| mpv -"
 
 function pacclean
   sudo pacman -Rns $(pacman -Qdtq)
