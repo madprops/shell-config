@@ -24,8 +24,8 @@ alias th="date +%H"
 alias tm="date +%M"
 alias jerry="wget -q menta.alwaysdata.net/s3/sein.php -O -| mpv -"
 alias yt="yt-dlp"
-alias blue2="bluetoothctl connect 1C:6E:4C:8B:90:53"
-alias blue0="bluetoothctl disconnect 1C:6E:4C"
+alias blue2="bluetoothctl connect $BLUETOOTH_DEVICE"
+alias blue0="bluetoothctl disconnect $BLUETOOTH_DEVICE"
 
 function pacclean
   sudo pacman -Rns $(pacman -Qdtq)
